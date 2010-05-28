@@ -1,4 +1,4 @@
-class DatabaseGitProxyGenerator < Rails::Generator::Base
+class GitBranchConfigsGenerator < Rails::Generator::Base
   def manifest
     record do |m|
       m.directory "config/branch_configs"
