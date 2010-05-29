@@ -36,8 +36,8 @@ if File.exists? MAPPINGS_FILE
     end
 
     if config_path
-      puts "Git Branch Config: #{git_branch} -> #{full_config_path}"
       full_config_path = "#{CONFIGS_PATH}/#{config_path}"
+      puts "Git Branch Config: #{git_branch} -> #{full_config_path}"
     else
       puts "Git Branch Config: no match"
     end
