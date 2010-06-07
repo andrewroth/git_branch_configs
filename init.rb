@@ -17,7 +17,7 @@ unless defined?(GitBranchConfigs)
 
           # special case to handle specific checkout of an sha
           head = g.object('HEAD').sha
-          if git_branch == "(no branch)"
+          if git_branch == "(no branch)" || git_branch == "deploy"
             for branch in (g.branches.remote + g.branches.local)
               if branch.gcommit.sha == head
                 git_branch = branch.name
