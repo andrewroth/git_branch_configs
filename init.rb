@@ -12,7 +12,7 @@ unless defined?(GitBranchConfigs)
 
         if mappings.class == Array
 
-          g = Git.init
+          g = Git.init(RAILS_ROOT)
           git_branch = g.lib.branch_current
 
           # special case to handle specific checkout of an sha
