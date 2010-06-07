@@ -2,7 +2,7 @@ require 'git'
 
 unless defined?(GitBranchConfigs)
   class GitBranchConfigs
-    RAILS_ROOT = "#{File.dirname(__FILE__)}/../../" unless defined?(RAILS_ROOT)
+    RAILS_ROOT = "#{File.dirname(__FILE__)}/../../../" unless defined?(RAILS_ROOT)
     CONFIGS_PATH = "#{RAILS_ROOT}/config/branch_configs"
     MAPPINGS_FILE = "#{CONFIGS_PATH}/branch_mappings.yml"
 
