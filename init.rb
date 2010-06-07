@@ -7,17 +7,13 @@ unless defined?(GitBranchConfigs)
     MAPPINGS_FILE = "#{CONFIGS_PATH}/branch_mappings.yml"
 
     def self.init
-      puts "1"
       if File.exists? MAPPINGS_FILE
         mappings = YAML::load(File.read(MAPPINGS_FILE))
-        puts "2"
 
         if mappings.class == Array
-          puts "3"
 
           g = Git.init(RAILS_ROOT)
           git_branch = g.lib.branch_current
-          puts "4 git_branch #{git_branch}"
 
           # special case to handle specific checkout of an sha
           head = g.object('HEAD').sha
