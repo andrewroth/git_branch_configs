@@ -1,3 +1,11 @@
-<% require "#{ENV['RAILS_ROOT'] || RAILS_ROOT}/vendor/plugins/git_branch_configs/init" %>
-<% require "#{ENV['RAILS_ROOT'] || RAILS_ROOT}/vendor/plugins/moonshine_multisite/lib/database_yml" %>
-<%= DatabaseYml.database_yml %>
+# This file specified which config should be loaded, based on the current branch.
+#
+# For example:
+#
+# - superbranch: super.rb
+# - /dev/: dev.rb
+# - /master/: master.rb
+#
+# The config file of the first match, from top to bottom, is loaded.
+
+
