@@ -21,7 +21,7 @@ unless defined?(GitBranchConfigs)
           if git_branch == "(no branch)" || git_branch == "deploy"
             for branch in (g.branches.remote + g.branches.local)
               if branch.gcommit.sha == head
-                git_branch = branch.name
+                git_branch = branch.full.split("/").last
                 break
               end
             end
