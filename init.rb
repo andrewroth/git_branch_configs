@@ -1,8 +1,5 @@
 begin
 require 'git'
-rescue LoadError
-  return # no git gem, abort
-end
 
 unless defined?(GitBranchConfigs)
   class GitBranchConfigs
@@ -63,4 +60,7 @@ unless defined?(GitBranchConfigs)
   end
 
   GitBranchConfigs.init
+end
+
+rescue LoadError
 end
