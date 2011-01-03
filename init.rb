@@ -63,4 +63,5 @@ unless defined?(GitBranchConfigs)
 end
 
 rescue LoadError
+  puts "Warning: branch configs not loaded because git gem was not found."
 end
